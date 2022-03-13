@@ -1,3 +1,5 @@
+package sk.tuke.kpi.kp.game.core;
+
 public enum Direction {
     UP, DOWN, LEFT, RIGHT, NONE;
 
@@ -31,14 +33,10 @@ public enum Direction {
             for (int col = 0; col < board.getSize(); col++) {
                 for (int next = col + 1; next < board.getSize(); next++) {
                     if (board.getTile(row, next).getValue() > 0) {
-                        if (board.getTile(row, col).getValue() == 0) {
+                        if (board.getTile(row, col).getValue() == (board.getTile(row, next)).getValue()) {
                             board.getTile(row, col).mergeNumbers(board.getTile(row, next));
-                        } else {
-                            if (board.getTile(row, col).getValue() == (board.getTile(row, next)).getValue()) {
-                                board.getTile(row, col).mergeNumbers(board.getTile(row, next));
-                            }
-                            break;
                         }
+                        break;
                     }
                 }
             }
@@ -50,14 +48,10 @@ public enum Direction {
             for (int col = board.getSize() - 1; col >= 0; col--) {
                 for (int next = col - 1; next >= 0; next--) {
                     if (board.getTile(next, row).getValue() > 0) {
-                        if (board.getTile(col, row).getValue() == 0) {
+                        if (board.getTile(col, row).getValue() == (board.getTile(next, row)).getValue()) {
                             board.getTile(col, row).mergeNumbers(board.getTile(next, row));
-                        } else {
-                            if (board.getTile(col, row).getValue() == (board.getTile(next, row)).getValue()) {
-                                board.getTile(col, row).mergeNumbers(board.getTile(next, row));
-                            }
-                            break;
                         }
+                        break;
                     }
                 }
             }
@@ -69,14 +63,10 @@ public enum Direction {
             for (int col = board.getSize() - 1; col >= 0; col--) {
                 for (int next = col - 1; next >= 0; next--) {
                     if (board.getTile(row, next).getValue() > 0) {
-                        if (board.getTile(row, col).getValue() == 0) {
+                        if (board.getTile(row, col).getValue() == (board.getTile(row, next)).getValue()) {
                             board.getTile(row, col).mergeNumbers(board.getTile(row, next));
-                        } else {
-                            if (board.getTile(row, col).getValue() == (board.getTile(row, next)).getValue()) {
-                                board.getTile(row, col).mergeNumbers(board.getTile(row, next));
-                            }
-                            break;
                         }
+                        break;
                     }
                 }
             }
@@ -88,14 +78,10 @@ public enum Direction {
             for (int col = 0; col < board.getSize(); col++) {
                 for (int next = col + 1; next < board.getSize(); next++) {
                     if (board.getTile(next, row).getValue() > 0) {
-                        if (board.getTile(col, row).getValue() == 0) {
+                        if (board.getTile(col, row).getValue() == (board.getTile(next, row)).getValue()) {
                             board.getTile(col, row).mergeNumbers(board.getTile(next, row));
-                        } else {
-                            if (board.getTile(col, row).getValue() == (board.getTile(next, row)).getValue()) {
-                                board.getTile(col, row).mergeNumbers(board.getTile(next, row));
-                            }
-                            break;
                         }
+                        break;
                     }
                 }
             }

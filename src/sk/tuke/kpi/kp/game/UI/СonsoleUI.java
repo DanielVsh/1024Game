@@ -1,34 +1,52 @@
+package sk.tuke.kpi.kp.game.UI;
+
+import sk.tuke.kpi.kp.game.core.Board;
+import sk.tuke.kpi.kp.game.core.Direction;
+import sk.tuke.kpi.kp.game.core.GameState;
+import sk.tuke.kpi.kp.game.entity.Score;
+import sk.tuke.kpi.kp.game.service.ScoreService;
+import sk.tuke.kpi.kp.game.service.ScoreServiceJDBC;
+
+import java.util.Date;
 import java.util.Scanner;
 
-public class UI {
+public class СonsoleUI {
 
     private Direction direction = Direction.NONE;
 
     private Scanner scanner = new Scanner(System.in);
 
+    ScoreService scoreService = new ScoreServiceJDBC();
+
     private final Board board;
 
-    public UI(Board board) {
+    public СonsoleUI(Board board) {
         this.board = board;
     }
 
     public void play() {
+        printTopScore();
         while (board.getGameState() == GameState.PLAYING) {
             Direction.directionBoard(board);
+            System.out.println("Score: " + Board.getScore());
             printBoard();
             processInput();
             board.spawnRandomNumbers();
-            System.out.println("Score: " + Board.getScore());
             board.isPossibleMove();
         }
         if (board.getGameState() == GameState.SOLVED) {
-            printBoard();
             System.out.println("YOU WON ! ! !");
             System.out.println("Score: " + Board.getScore());
+            printBoard();
+            scoreService.addScore(new Score(System.getProperty("user.name"), Board.getScore(), new Date()));
+            printTopScore();
             System.exit(0);
         } else if (board.getGameState() == GameState.FAILED) {
             System.out.println("YOU LOSE :(");
             System.out.println("Score: " + Board.getScore());
+            printBoard();
+            scoreService.addScore(new Score(System.getProperty("user.name"), Board.getScore(), new Date()));
+            printTopScore();
             System.exit(0);
         }
     }
@@ -55,6 +73,19 @@ public class UI {
             case "D" -> direction.moveTo(Direction.RIGHT);
             default -> direction.moveTo(Direction.NONE);
         }
+
+    }
+
+    private void printTopScore() {
+        var scoreServiceJDBC = new ScoreServiceJDBC();
+        var scores = scoreServiceJDBC.getTopScore();
+
+        System.out.println("________________________________________________");
+        for (int i = 0; i < scores.size(); i++) {
+            var score = scores.get(i);
+            System.out.printf("%d %s %d %s\n", i + 1, score.getPlayer(), score.getScore(), score.getPlayedDate());
+        }
+        System.out.println("________________________________________________");
 
     }
 

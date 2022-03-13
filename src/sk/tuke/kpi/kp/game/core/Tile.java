@@ -1,3 +1,7 @@
+package sk.tuke.kpi.kp.game.core;
+
+import sk.tuke.kpi.kp.game.entity.Score;
+
 public class Tile {
     private int value;
 
@@ -10,9 +14,9 @@ public class Tile {
     }
 
     public void mergeNumbers(Tile number) {
+        Board.setScore(Board.getScore() + (number.getValue() * 2));
         this.setValue(value + number.getValue());
         number.deleteNumber();
-        Board.setScore(Board.getScore() + 2);
         if(value == 1024) {
             Board.setGameState(GameState.SOLVED);
         }

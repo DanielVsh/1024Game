@@ -1,18 +1,19 @@
+package sk.tuke.kpi.kp.game.core;
+
 import java.util.Random;
 
 public class Board {
     Random random = new Random();
 
     private static int score;
-
     private final Tile[][] tiles;
     private final int size;
     private static GameState gameState = GameState.PLAYING;
 
     public Board(int size) {
-        score = 0;
         this.size = size;
         tiles = new Tile[size][size];
+        score = 0;
         generate();
     }
 
@@ -84,6 +85,14 @@ public class Board {
         }
     }
 
+    public static int getScore() {
+        return score;
+    }
+
+    public static void setScore(int score) {
+        Board.score = score;
+    }
+
     public Tile getTile(int row, int column) {
         return tiles[row][column];
     }
@@ -102,13 +111,5 @@ public class Board {
 
     public GameState getGameState() {
         return gameState;
-    }
-
-    public static int getScore() {
-        return score;
-    }
-
-    public static void setScore(int scoreS) {
-        score = scoreS;
     }
 }
