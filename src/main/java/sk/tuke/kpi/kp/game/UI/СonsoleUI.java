@@ -30,9 +30,13 @@ public class СonsoleUI {
             Direction.directionBoard(board);
             System.out.println("Score: " + Board.getScore());
             printBoard();
+
             processInput();
-            board.spawnRandomNumbers();
-            board.isPossibleMove();
+            if(direction.isMoved()) {
+                board.spawnRandomNumbers();
+            }
+
+            board.checkPossibleMoves();
         }
         if (board.getGameState() == GameState.SOLVED) {
             System.out.println("YOU WON ! ! !");

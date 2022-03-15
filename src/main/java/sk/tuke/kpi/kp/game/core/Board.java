@@ -5,10 +5,11 @@ import java.util.Random;
 public class Board {
     Random random = new Random();
 
-    private static int score;
-    private final Tile[][] tiles;
-    private final int size;
     private static GameState gameState = GameState.PLAYING;
+
+    private static int score;
+    private final int size;
+    private final Tile[][] tiles;
 
     public Board(int size) {
         this.size = size;
@@ -53,26 +54,25 @@ public class Board {
         return count;
     }
 
-    public boolean isPossibleMove () {
-        if(countOfEmptyTiles() > 0) {
-            return true;
+    public void checkPossibleMoves() {
+        if (countOfEmptyTiles() > 0) {
+            return;
         }
         for (int row = 0; row < getSize() - 1; row++) {
-            for(int col = 1; col < getSize(); col ++) {
-                if(getTile(row,col).numberEquals(getTile(row,col - 1))) {
-                    return true;
+            for (int col = 1; col < getSize(); col++) {
+                if (getTile(row, col).numberEquals(getTile(row, col - 1))) {
+                    return;
                 }
             }
         }
         for (int row = 0; row < getSize(); row++) {
-            for(int col = 0;col < getSize() - 1; col ++) {
-                if(getTile(row,col).numberEquals(getTile(row,col + 1))) {
-                    return true;
+            for (int col = 0; col < getSize() - 1; col++) {
+                if (getTile(row, col).numberEquals(getTile(row, col + 1))) {
+                    return;
                 }
             }
         }
         setGameState(GameState.FAILED);
-        return false;
     }
 
     private void randomLoop() {

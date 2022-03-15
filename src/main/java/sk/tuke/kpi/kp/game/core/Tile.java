@@ -1,7 +1,5 @@
 package sk.tuke.kpi.kp.game.core;
 
-import sk.tuke.kpi.kp.game.entity.Score;
-
 public class Tile {
     private int value;
 
@@ -13,8 +11,10 @@ public class Tile {
         this.value = 0;
     }
 
-    public void mergeNumbers(Tile number) {
-        Board.setScore(Board.getScore() + (number.getValue() * 2));
+    public void mergeNumbers(Tile number, boolean isZero) {
+        if(!isZero) {
+            Board.setScore(Board.getScore() + (number.getValue() * 2));
+        }
         this.setValue(value + number.getValue());
         number.deleteNumber();
         if(value == 1024) {
