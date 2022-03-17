@@ -10,7 +10,7 @@ import sk.tuke.kpi.kp.game.service.ScoreServiceJDBC;
 import java.util.Date;
 import java.util.Scanner;
 
-public class СonsoleUI {
+public class ConsoleUI {
 
     private Direction direction = Direction.NONE;
 
@@ -20,7 +20,7 @@ public class СonsoleUI {
 
     private final Board board;
 
-    public СonsoleUI(Board board) {
+    public ConsoleUI(Board board) {
         this.board = board;
     }
 
@@ -55,7 +55,7 @@ public class СonsoleUI {
         }
     }
 
-    private void printBoard() {
+    public void printBoard() {
         for (int row = 0; row < board.getSize(); row++) {
             for (int column = 0; column < board.getSize(); column++) {
                 System.out.print(" " + board.getTile(row, column).getValue());

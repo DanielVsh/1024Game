@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a652f5-adaa-4880-b7b5-643cf6982af5" name="Changes" comment="Refactoring&#10;fixed class Direction">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/UI/СonsoleUI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/core/Board.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/core/Direction$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/core/Direction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/core/GameState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/core/Tile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/entity/Score.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/service/ScoreService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/service/ScoreServiceJDBC.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/BoardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/DirectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/TileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/СonsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/ConsoleUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/UI/СonsoleUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/core/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/core/Board.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -67,33 +66,85 @@
       <recent name="sk.tuke.kpi.kp.game.core" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.Main" />
+  <component name="RunManager" selected="JUnit.All in 1024Game">
+    <configuration name="All in 1024Game" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="1024Game" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sk.tuke.kpi.kp.game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnitTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="1024Game" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JUnitTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sk.tuke.kpi.kp.game.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sk.tuke.kpi.kp.game.core" />
+      <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.core.BoardTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TileTest.deleteNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="1024Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sk.tuke.kpi.kp.game.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sk.tuke.kpi.kp.game.core" />
+      <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.core.TileTest" />
+      <option name="METHOD_NAME" value="deleteNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TileTest.mergeNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="1024Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sk.tuke.kpi.kp.game.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sk.tuke.kpi.kp.game.core" />
+      <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.core.TileTest" />
+      <option name="METHOD_NAME" value="mergeNumbers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TileTest.numberEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="1024Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sk.tuke.kpi.kp.game.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sk.tuke.kpi.kp.game.core" />
+      <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.core.TileTest" />
+      <option name="METHOD_NAME" value="numberEquals" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.JUnitTests" />
+        <item itemvalue="JUnit.All in 1024Game" />
+        <item itemvalue="JUnit.TileTest.deleteNumber" />
+        <item itemvalue="JUnit.TileTest.numberEquals" />
+        <item itemvalue="JUnit.TileTest.mergeNumbers" />
+        <item itemvalue="JUnit.BoardTest" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +157,9 @@
       <option name="presentableId" value="Default" />
       <updated>1647346095461</updated>
       <workItem from="1647346096917" duration="16806000" />
-      <workItem from="1647374298141" duration="325000" />
+      <workItem from="1647374298141" duration="6360000" />
+      <workItem from="1647470985989" duration="7000" />
+      <workItem from="1647523187893" duration="6148000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring&#10;fixed class Direction">
       <created>1647374546492</created>
@@ -115,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647374546492</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactoring&#10;fixed class Direction">
+      <created>1647374668316</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647374668316</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

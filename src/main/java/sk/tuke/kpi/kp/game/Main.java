@@ -1,6 +1,6 @@
 package sk.tuke.kpi.kp.game;
 
-import sk.tuke.kpi.kp.game.UI.СonsoleUI;
+import sk.tuke.kpi.kp.game.UI.ConsoleUI;
 import sk.tuke.kpi.kp.game.core.Board;
 
 public class Main {
@@ -8,7 +8,7 @@ public class Main {
 
         Board board = new Board(4);
 
-        СonsoleUI сonsoleUi = new СonsoleUI(board);
-        сonsoleUi.play();
+        ConsoleUI consoleUi = new ConsoleUI(board);
+        consoleUi.play();
     }
 }

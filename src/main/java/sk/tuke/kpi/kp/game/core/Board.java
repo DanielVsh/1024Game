@@ -3,13 +3,13 @@ package sk.tuke.kpi.kp.game.core;
 import java.util.Random;
 
 public class Board {
-    Random random = new Random();
+    private Random random = new Random();
 
     private static GameState gameState = GameState.PLAYING;
 
     private static int score;
     private final int size;
-    private final Tile[][] tiles;
+    private Tile[][] tiles;
 
     public Board(int size) {
         this.size = size;
@@ -95,6 +95,10 @@ public class Board {
 
     public Tile getTile(int row, int column) {
         return tiles[row][column];
+    }
+
+    public void setTiles (Tile[][] tiles) {
+        this.tiles = tiles;
     }
 
     public Tile[][] getTiles() {
