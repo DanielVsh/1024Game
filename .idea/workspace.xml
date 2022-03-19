@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a652f5-adaa-4880-b7b5-643cf6982af5" name="Changes" comment="Refactoring&#10;fixed class Direction">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/BoardTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/DirectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/TileTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/СonsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/ConsoleUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/UI/СonsoleUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/core/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/tuke/kpi/kp/game/core/Board.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -158,6 +148,7 @@
       <workItem from="1647374298141" duration="6360000" />
       <workItem from="1647470985989" duration="7000" />
       <workItem from="1647523187893" duration="6148000" />
+      <workItem from="1647733838049" duration="474000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring&#10;fixed class Direction">
       <created>1647374546492</created>
