@@ -3,7 +3,7 @@ package sk.tuke.kpi.kp.game.core;
 import java.util.Random;
 
 public class Board {
-    private Random random = new Random();
+    private final Random random = new Random();
 
     private static GameState gameState = GameState.PLAYING;
 
@@ -55,9 +55,10 @@ public class Board {
     }
 
     public void checkPossibleMoves() {
-        if (countOfEmptyTiles() > 0) {
+        if(countOfEmptyTiles() > 0) {
             return;
         }
+
         for (int row = 0; row < getSize() - 1; row++) {
             for (int col = 1; col < getSize(); col++) {
                 if (getTile(row, col).numberEquals(getTile(row, col - 1))) {
@@ -65,6 +66,7 @@ public class Board {
                 }
             }
         }
+
         for (int row = 0; row < getSize(); row++) {
             for (int col = 0; col < getSize() - 1; col++) {
                 if (getTile(row, col).numberEquals(getTile(row, col + 1))) {
@@ -72,6 +74,23 @@ public class Board {
                 }
             }
         }
+
+        for (int row = 1; row < getSize(); row++) {
+            for (int col = 0; col < getSize() - 1; col++) {
+                if (getTile(row, col).numberEquals(getTile(row - 1, col))) {
+                    return;
+                }
+            }
+        }
+
+        for (int row = 0; row < getSize() - 1; row++) {
+            for (int col = 0; col < getSize(); col++) {
+                if (getTile(row, col).numberEquals(getTile(row + 1, col ))) {
+                    return;
+                }
+            }
+        }
+
         setGameState(GameState.FAILED);
     }
 
