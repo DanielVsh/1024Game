@@ -1,6 +1,7 @@
 package sk.tuke.kpi.kp.game.core;
 
 import org.junit.jupiter.api.Test;
+import sk.tuke.kpi.kp.game.UI.ConsoleUI;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -9,8 +10,8 @@ class DirectionTest {
     Board boardArray = new Board(4);
     Board boardResult = new Board(4);
 
-    Tile array[][] = new Tile[4][4];
-    Tile result[][] = new Tile[4][4];
+    Tile[][] array = new Tile[4][4];
+    Tile[][] result = new Tile[4][4];
 
     private void loopEmpty() {
         for (int i = 0; i < 4; i++) {
@@ -39,6 +40,39 @@ class DirectionTest {
         direction.moveTo(Direction.UP);
 
         assertEquals(boardArray.getTile(0, 0).getValue(), boardResult.getTile(0, 0).getValue());
+    }
+
+    @Test
+    void moveUp2() {
+        loopEmpty();
+
+        array[0][0] = new Tile(4);
+        array[0][1] = new Tile(2);
+        array[0][2] = new Tile(4);
+        array[0][3] = new Tile(1);
+        array[1][0] = new Tile(2);
+        array[1][1] = new Tile(1);
+        array[1][2] = new Tile(16);
+        array[1][3] = new Tile(1);
+        array[2][0] = new Tile(1);
+        array[2][1] = new Tile(8);
+        array[2][2] = new Tile(2);
+        array[2][3] = new Tile(1);
+        array[3][0] = new Tile(4);
+        array[3][1] = new Tile(2);
+        array[3][2] = new Tile(1);
+        array[3][3] = new Tile(2);
+
+        boardArray.setTiles(array);
+        ConsoleUI consoleUI = new ConsoleUI(boardArray);
+        consoleUI.printBoard();
+
+        Direction direction = Direction.NONE;
+        Direction.directionBoard(boardArray);
+        direction.moveTo(Direction.UP);
+        boardArray.checkPossibleMoves();
+
+        assertEquals(GameState.PLAYING, boardArray.getGameState());
     }
 
     @Test
@@ -120,7 +154,7 @@ class DirectionTest {
     void loseGame() {
         loopEmpty();
         for (int i = 0; i < boardArray.getSize(); i++) {
-            for ( int j = 0, k = 1; j < boardArray.getSize(); j++, k *= 2) {
+            for (int j = 0, k = 1; j < boardArray.getSize(); j++, k *= 2) {
                 array[i][j] = new Tile(k);
             }
         }
