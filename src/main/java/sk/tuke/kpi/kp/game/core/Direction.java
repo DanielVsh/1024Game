@@ -40,7 +40,7 @@ public enum Direction {
                             board.getTile(row, col).mergeNumbers(board.getTile(row, next), true);
                             isMoved = true;
                         } else {
-                            if (board.getTile(row, col).getValue() == (board.getTile(row, next)).getValue()) {
+                            if (board.getTile(row, col).numberEquals(board.getTile(row, next))) {
                                 board.getTile(row, col).mergeNumbers(board.getTile(row, next), false);
                                 isMoved = true;
                             }
@@ -61,7 +61,7 @@ public enum Direction {
                             board.getTile(col, row).mergeNumbers(board.getTile(next, row), true);
                             isMoved = true;
                         } else {
-                            if (board.getTile(col, row).getValue() == (board.getTile(next, row)).getValue()) {
+                            if (board.getTile(col, row).numberEquals(board.getTile(next, row))) {
                                 board.getTile(col, row).mergeNumbers(board.getTile(next, row), false);
                                 isMoved = true;
                             }
@@ -82,7 +82,7 @@ public enum Direction {
                             board.getTile(row, col).mergeNumbers(board.getTile(row, next), true);
                             isMoved = true;
                         } else {
-                            if (board.getTile(row, col).getValue() == (board.getTile(row, next)).getValue()) {
+                            if (board.getTile(row, col).numberEquals(board.getTile(row, next))) {
                                 board.getTile(row, col).mergeNumbers(board.getTile(row, next), false);
                                 isMoved = true;
                             }
@@ -103,7 +103,7 @@ public enum Direction {
                             board.getTile(col, row).mergeNumbers(board.getTile(next, row), true);
                             isMoved = true;
                         } else {
-                            if (board.getTile(col, row).getValue() == (board.getTile(next, row)).getValue()) {
+                            if (board.getTile(col, row).numberEquals(board.getTile(next, row))) {
                                 board.getTile(col, row).mergeNumbers(board.getTile(next, row), false);
                                 isMoved = true;
                             }
