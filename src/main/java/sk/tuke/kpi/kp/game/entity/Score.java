@@ -39,12 +39,4 @@ public class Score {
         this.playedDate = playedDate;
     }
 
-    @Override
-    public String toString() {
-        return "Score{" +
-                "score=" + points +
-                ", player='" + player + '\'' +
-                ", playedDate=" + playedDate +
-                '}';
-    }
 }

@@ -12,9 +12,9 @@ import java.util.Scanner;
 
 public class ConsoleUI {
 
-    private Direction direction = Direction.NONE;
+    private final Direction direction = Direction.NONE;
 
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     ScoreService scoreService = new ScoreServiceJDBC();
 

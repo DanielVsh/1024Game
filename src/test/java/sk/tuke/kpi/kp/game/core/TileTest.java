@@ -8,7 +8,7 @@ class TileTest {
 
     Board boardArray = new Board(4);
 
-    Tile array[][] = new Tile[4][4];
+    Tile[][] array = new Tile[4][4];
 
     private void loopEmpty() {
         for (int i = 0; i < 4; i++) {
