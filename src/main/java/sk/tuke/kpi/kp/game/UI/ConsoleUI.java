@@ -16,7 +16,7 @@ public class ConsoleUI {
 
     private final Scanner scanner = new Scanner(System.in);
 
-    ScoreService scoreService = new ScoreServiceJDBC();
+    private ScoreService scoreService = new ScoreServiceJDBC();
 
     private final Board board;
 
