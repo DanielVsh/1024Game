@@ -39,7 +39,9 @@ class DirectionTest {
         Direction.directionBoard(boardArray);
         direction.moveTo(Direction.UP);
 
-        assertEquals(boardArray.getTile(0, 0).getValue(), boardResult.getTile(0, 0).getValue());
+        assertEquals(boardArray.getTile(0, 0).getValue(),
+                boardResult.getTile(0, 0).getValue());
+
     }
 
     @Test
@@ -92,7 +94,8 @@ class DirectionTest {
         direction.moveTo(Direction.DOWN);
 
 
-        assertEquals(boardArray.getTile(3, 0).getValue() == 2, boardResult.getTile(3, 0).getValue() == 2);
+        assertEquals(boardArray.getTile(3, 0).getValue() == 2,
+                boardResult.getTile(3, 0).getValue() == 2);
     }
 
     @Test
@@ -112,7 +115,8 @@ class DirectionTest {
         direction.moveTo(Direction.RIGHT);
 
 
-        assertEquals(boardArray.getTile(0, 3).getValue(), boardResult.getTile(0, 3).getValue());
+        assertEquals(boardArray.getTile(0, 3).getValue(),
+                boardResult.getTile(0, 3).getValue());
     }
 
     @Test
@@ -131,7 +135,8 @@ class DirectionTest {
         Direction.directionBoard(boardArray);
         direction.moveTo(Direction.LEFT);
 
-        assertEquals(boardArray.getTile(1, 0).getValue(), boardResult.getTile(1, 0).getValue());
+        assertEquals(boardArray.getTile(1, 0).getValue(),
+                boardResult.getTile(1, 0).getValue());
     }
 
     @Test

@@ -120,10 +120,6 @@ public class Board {
         this.tiles = tiles;
     }
 
-    public Tile[][] getTiles() {
-        return tiles;
-    }
-
     public int getSize() {
         return size;
     }
