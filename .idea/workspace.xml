@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a652f5-adaa-4880-b7b5-643cf6982af5" name="Changes" comment="Refactoring&#10;+tests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="52a652f5-adaa-4880-b7b5-643cf6982af5" name="Changes" comment="Refactoring">
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/ConsoleUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <recent name="sk.tuke.kpi.kp.game.core" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ScoreServiceJDBCTest">
+  <component name="RunManager" selected="JUnit.All in 1024Game">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.Main" />
       <module name="1024Game" />
@@ -136,9 +136,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in 1024Game" />
         <item itemvalue="JUnit.ScoreServiceJDBCTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.All in 1024Game" />
         <item itemvalue="JUnit.TileTest.deleteNumber" />
         <item itemvalue="JUnit.TileTest.numberEquals" />
       </list>
@@ -164,7 +164,7 @@
       <workItem from="1647880532748" duration="114000" />
       <workItem from="1647953965583" duration="54000" />
       <workItem from="1647959946350" duration="595000" />
-      <workItem from="1647991874067" duration="4904000" />
+      <workItem from="1647991874067" duration="5341000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring&#10;fixed class Direction">
       <created>1647374546492</created>
@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647995345618</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactoring">
+      <created>1647997850826</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647997850826</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +228,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring&#10;fixed class Direction" />
     <MESSAGE value="Refactoring&#10;+tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring&#10;+tests" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>
