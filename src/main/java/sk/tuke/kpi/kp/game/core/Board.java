@@ -1,8 +1,10 @@
 package sk.tuke.kpi.kp.game.core;
 
+import java.io.*;
 import java.util.Random;
 
-public class Board {
+public class Board implements Serializable {
+
     private final Random random = new Random();
 
     private static GameState gameState = GameState.PLAYING;
@@ -55,7 +57,7 @@ public class Board {
     }
 
     public void checkPossibleMoves() {
-        if(countOfEmptyTiles() > 0) {
+        if (countOfEmptyTiles() > 0) {
             return;
         }
 
@@ -85,7 +87,7 @@ public class Board {
 
         for (int row = 0; row < getSize() - 1; row++) {
             for (int col = 0; col < getSize(); col++) {
-                if (getTile(row, col).numberEquals(getTile(row + 1, col ))) {
+                if (getTile(row, col).numberEquals(getTile(row + 1, col))) {
                     return;
                 }
             }
@@ -116,7 +118,7 @@ public class Board {
         return tiles[row][column];
     }
 
-    public void setTiles (Tile[][] tiles) {
+    public void setTiles(Tile[][] tiles) {
         this.tiles = tiles;
     }
 

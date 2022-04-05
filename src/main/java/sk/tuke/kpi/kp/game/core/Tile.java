@@ -1,6 +1,8 @@
 package sk.tuke.kpi.kp.game.core;
 
-public class Tile {
+import java.io.Serializable;
+
+public class Tile implements Serializable {
     private int value;
 
     public Tile(int value) {

@@ -1,11 +1,11 @@
 package sk.tuke.kpi.kp.game.UI;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.kpi.kp.game.core.Board;
 import sk.tuke.kpi.kp.game.core.Direction;
 import sk.tuke.kpi.kp.game.core.GameState;
 import sk.tuke.kpi.kp.game.entity.Score;
 import sk.tuke.kpi.kp.game.service.ScoreService;
-import sk.tuke.kpi.kp.game.service.ScoreServiceJDBC;
 
 import java.util.Date;
 import java.util.Scanner;
@@ -16,7 +16,8 @@ public class ConsoleUI {
 
     private final Scanner scanner = new Scanner(System.in);
 
-    private final ScoreService scoreService = new ScoreServiceJDBC();
+    @Autowired
+    private ScoreService scoreService;
 
     private final Board board;
 
@@ -42,14 +43,18 @@ public class ConsoleUI {
             System.out.println("YOU WON ! ! !");
             System.out.println("Score: " + Board.getScore());
             printBoard();
-            scoreService.addScore(new Score(System.getProperty("user.name"), Board.getScore(), new Date()));
+            scoreService.addScore(new Score("1024", System.getProperty("user.name"),
+                    Board.getScore(),
+                    new Date()));
             printTopScore();
             System.exit(0);
         } else if (board.getGameState() == GameState.FAILED) {
             System.out.println("YOU LOSE :(");
             System.out.println("Score: " + Board.getScore());
             printBoard();
-            scoreService.addScore(new Score(System.getProperty("user.name"), Board.getScore(), new Date()));
+            scoreService.addScore(new Score("1024", System.getProperty("user.name"),
+                    Board.getScore(),
+                    new Date()));
             printTopScore();
             System.exit(0);
         }
@@ -81,8 +86,7 @@ public class ConsoleUI {
     }
 
     private void printTopScore() {
-        var scoreServiceJDBC = new ScoreServiceJDBC();
-        var scores = scoreServiceJDBC.getTopScore();
+        var scores = scoreService.getTopScores("1024");
 
         System.out.println("________________________________________________");
         for (int i = 0; i < scores.size(); i++) {

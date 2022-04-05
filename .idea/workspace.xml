@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a652f5-adaa-4880-b7b5-643cf6982af5" name="Changes" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.jpb/persistence-units.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/SpringClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/GameServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/ScoreServiceRest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/GameStudioException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/ScoreServiceJPA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/ScoreServiceRestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/ConsoleUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/entity/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/entity/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/ScoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/ScoreServiceJDBC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/service/ScoreServiceJDBCTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,6 +55,22 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -40,13 +80,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="import_schema_mapping" value="&lt;schema-mapping&gt;&lt;databases&gt;&lt;list&gt;&lt;schema-mapping-item&gt;&lt;source-data-source-id&gt;70e6ae2c-b4fb-462d-af3d-0f4233246d55&lt;/source-data-source-id&gt;&lt;source-path&gt;database/&quot;postgres&quot;/schema/&quot;public&quot;&lt;/source-path&gt;&lt;target-data-source-id&gt;70e6ae2c-b4fb-462d-af3d-0f4233246d55&lt;/target-data-source-id&gt;&lt;target-path&gt;database/&quot;1024&quot;/schema/&quot;game&quot;&lt;/target-path&gt;&lt;/schema-mapping-item&gt;&lt;/list&gt;&lt;/databases&gt;&lt;/schema-mapping&gt;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -65,7 +111,14 @@
       <recent name="sk.tuke.kpi.kp.game.core" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in 1024Game">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringClient">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.Main" />
       <module name="1024Game" />
@@ -91,7 +144,7 @@
       <module name="1024Game" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sk.tuke.kpi.kp.game.service.*" />
+          <option name="PATTERN" value="sk.tuke.kpi.kp.game.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,45 +155,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TileTest.deleteNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="1024Game" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sk.tuke.kpi.kp.game.core.*" />
+          <option name="PATTERN" value="sk.tuke.kpi.kp.game.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="sk.tuke.kpi.kp.game.core" />
-      <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.core.TileTest" />
-      <option name="METHOD_NAME" value="deleteNumber" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="sk.tuke.kpi.kp.game.server.GameServer" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TileTest.numberEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringClient" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="1024Game" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sk.tuke.kpi.kp.game.core.*" />
+          <option name="PATTERN" value="sk.tuke.kpi.kp.game.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="sk.tuke.kpi.kp.game.core" />
-      <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.core.TileTest" />
-      <option name="METHOD_NAME" value="numberEquals" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="sk.tuke.kpi.kp.game.SpringClient" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringClient" />
+        <item itemvalue="Spring Boot.GameServer" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in 1024Game" />
         <item itemvalue="JUnit.ScoreServiceJDBCTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TileTest.deleteNumber" />
-        <item itemvalue="JUnit.TileTest.numberEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +211,19 @@
       <workItem from="1647880532748" duration="114000" />
       <workItem from="1647953965583" duration="54000" />
       <workItem from="1647959946350" duration="595000" />
-      <workItem from="1647991874067" duration="5341000" />
+      <workItem from="1647991874067" duration="5673000" />
+      <workItem from="1648046839214" duration="609000" />
+      <workItem from="1648205024326" duration="1991000" />
+      <workItem from="1648387918014" duration="63000" />
+      <workItem from="1648631630730" duration="1382000" />
+      <workItem from="1648663794667" duration="43000" />
+      <workItem from="1648728605892" duration="4896000" />
+      <workItem from="1648906980474" duration="2096000" />
+      <workItem from="1648909154679" duration="3029000" />
+      <workItem from="1648912252249" duration="7003000" />
+      <workItem from="1648925134563" duration="522000" />
+      <workItem from="1649099791245" duration="7415000" />
+      <workItem from="1649185761317" duration="6175000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring&#10;fixed class Direction">
       <created>1647374546492</created>
@@ -208,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647997850826</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactoring">
+      <created>1647998525435</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647998525435</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
