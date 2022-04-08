@@ -3,10 +3,12 @@ package sk.tuke.kpi.kp.game.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity
+@Table
 public class Score implements Serializable {
     @Id
     @GeneratedValue
@@ -36,6 +38,14 @@ public class Score implements Serializable {
     }
 
     public Score() {
+    }
+
+    public String getGame() {
+        return game;
+    }
+
+    public void setGame(String game) {
+        this.game = game;
     }
 
     public int getScore() {

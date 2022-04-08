@@ -8,7 +8,7 @@ import sk.tuke.kpi.kp.game.service.ScoreService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/score")
+@RequestMapping("/score")
 public class ScoreServiceRest {
     @Autowired
     private ScoreService scoreService;

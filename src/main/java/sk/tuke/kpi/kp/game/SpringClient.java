@@ -20,7 +20,6 @@ import sk.tuke.kpi.kp.game.service.ScoreServiceJPA;
         pattern = "sk.tuke.kpi.kp.game.server.*"))
 public class SpringClient {
     public static void main(String[] args) {
-        //SpringApplication.run(SpringClient.class);
         new SpringApplicationBuilder(SpringClient.class).web(WebApplicationType.NONE).run(args);
     }
 

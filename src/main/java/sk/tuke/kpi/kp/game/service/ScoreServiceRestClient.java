@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ScoreServiceRestClient implements ScoreService{
-    //See value of remote.server.api in application.properties
     @Value("${remote.server.api}")
     private String url;
 
@@ -18,17 +17,20 @@ public class ScoreServiceRestClient implements ScoreService{
 
     @Override
     public void addScore(Score score) {
-        restTemplate.postForEntity(url + "/score", score, Score.class);
+        restTemplate.postForEntity(
+                url + "/score", score, Score.class);
     }
 
     @Override
     public List<Score> getTopScores(String game) {
-        return Arrays.asList(restTemplate.getForEntity(url + "/score/" + game, Score[].class).getBody());
+        return Arrays.asList(restTemplate.getForEntity(url +
+                        "/score/" + game, Score[].class).getBody());
     }
 
     @Override
     public void reset() {
-        throw new UnsupportedOperationException("Not supported via web service");
+        throw new UnsupportedOperationException(
+                "Not supported via web service");
     }
 
 }
