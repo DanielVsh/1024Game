@@ -1,4 +1,4 @@
-package sk.tuke.kpi.kp.game.entity;
+package sk.tuke.kpi.kp.game.entity.score;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

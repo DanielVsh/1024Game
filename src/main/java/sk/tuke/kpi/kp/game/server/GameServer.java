@@ -6,8 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import sk.tuke.kpi.kp.game.service.ScoreService;
-import sk.tuke.kpi.kp.game.service.ScoreServiceJPA;
+import sk.tuke.kpi.kp.game.service.comments.CommentService;
+import sk.tuke.kpi.kp.game.service.comments.CommentServiceJPA;
+import sk.tuke.kpi.kp.game.service.rating.RatingService;
+import sk.tuke.kpi.kp.game.service.rating.RatingServiceJPA;
+import sk.tuke.kpi.kp.game.service.score.ScoreService;
+import sk.tuke.kpi.kp.game.service.score.ScoreServiceJPA;
 
 @SpringBootApplication
 @Configuration
@@ -20,6 +24,16 @@ public class GameServer {
     @Bean
     public ScoreService scoreService() {
         return new ScoreServiceJPA();
+    }
+
+    @Bean
+    public CommentService commentService() {
+        return new CommentServiceJPA();
+    }
+
+    @Bean
+    public RatingService ratingService() {
+        return new RatingServiceJPA();
     }
 }
 

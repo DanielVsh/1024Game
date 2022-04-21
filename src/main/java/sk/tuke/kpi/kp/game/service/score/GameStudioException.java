@@ -1,4 +1,4 @@
-package sk.tuke.kpi.kp.game.service;
+package sk.tuke.kpi.kp.game.service.score;
 
 public class GameStudioException extends RuntimeException {
 

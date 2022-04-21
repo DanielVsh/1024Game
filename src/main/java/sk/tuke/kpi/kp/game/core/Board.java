@@ -3,6 +3,7 @@ package sk.tuke.kpi.kp.game.core;
 import java.io.*;
 import java.util.Random;
 
+
 public class Board implements Serializable {
 
     private final Random random = new Random();

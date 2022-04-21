@@ -1,16 +1,19 @@
-package sk.tuke.kpi.kp.game.service;
+package sk.tuke.kpi.kp.game.service.score;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-import sk.tuke.kpi.kp.game.entity.Score;
+import sk.tuke.kpi.kp.game.entity.score.Score;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class ScoreServiceRestClient implements ScoreService{
     @Value("${remote.server.api}")
-    private String url;
+    private String url ;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -23,14 +26,15 @@ public class ScoreServiceRestClient implements ScoreService{
 
     @Override
     public List<Score> getTopScores(String game) {
-        return Arrays.asList(restTemplate.getForEntity(url +
-                        "/score/" + game, Score[].class).getBody());
+        return Arrays.asList(
+            Objects.requireNonNull(
+                restTemplate.getForObject(url + "/score/" + game +"/all", Score[].class)));
+//        return List.of(new Score("test", "test", 1234, new Date()));
     }
 
     @Override
     public void reset() {
-        throw new UnsupportedOperationException(
-                "Not supported via web service");
+        restTemplate.delete(url + "/score");
     }
 
 }

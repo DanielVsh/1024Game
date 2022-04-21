@@ -1,6 +1,6 @@
-package sk.tuke.kpi.kp.game.service;
+package sk.tuke.kpi.kp.game.service.score;
 
-import sk.tuke.kpi.kp.game.entity.Score;
+import sk.tuke.kpi.kp.game.entity.score.Score;
 
 import java.util.List;
 
