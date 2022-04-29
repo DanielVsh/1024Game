@@ -1,20 +1,18 @@
 package sk.tuke.kpi.kp.game.UI;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import sk.tuke.kpi.kp.game.core.Board;
 import sk.tuke.kpi.kp.game.core.Direction;
 import sk.tuke.kpi.kp.game.core.GameState;
 import sk.tuke.kpi.kp.game.entity.coments.Comment;
 import sk.tuke.kpi.kp.game.entity.rating.Rating;
 import sk.tuke.kpi.kp.game.entity.score.Score;
-import sk.tuke.kpi.kp.game.service.comments.CommentException;
 import sk.tuke.kpi.kp.game.service.comments.CommentService;
-import sk.tuke.kpi.kp.game.service.rating.RatingException;
 import sk.tuke.kpi.kp.game.service.rating.RatingService;
 import sk.tuke.kpi.kp.game.service.score.ScoreService;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -39,6 +37,8 @@ public class ConsoleUI {
 
   public void play() {
     printTopScore();
+    printComments();
+    printRating();
     while (board.getGameState() == GameState.PLAYING) {
       Direction.directionBoard(board);
       System.out.println("Score: " + Board.getScore());
@@ -55,9 +55,9 @@ public class ConsoleUI {
         System.out.println("Score: " + Board.getScore());
         printBoard();
         scoreService.addScore(new Score("1024",
-            System.getProperty("user.name"),
-            Board.getScore(),
-            new Date())
+          System.getProperty("user.name"),
+          Board.getScore(),
+          new Date())
         );
         printTopScore();
         processRatingAndComment();
@@ -68,9 +68,9 @@ public class ConsoleUI {
         System.out.println("Score: " + Board.getScore());
         printBoard();
         scoreService.addScore(new Score("1024",
-            System.getProperty("user.name"),
-            Board.getScore(),
-            new Date())
+          System.getProperty("user.name"),
+          Board.getScore(),
+          new Date())
         );
         printTopScore();
         processRatingAndComment();
@@ -112,9 +112,23 @@ public class ConsoleUI {
     System.out.println("________________________________________________");
     for (int i = 0; i < scores.size(); i++) {
       var score = scores.get(i);
-      System.out.printf("%d %s %d %s\n", i + 1, score.getPlayer(), score.getScore(), score.getPlayedDate());
+      System.out.printf("%d %s %d %s\n",
+        i + 1, score.getPlayer(), score.getScore(), score.getPlayedDate());
     }
     System.out.println("________________________________________________");
+  }
+
+  private void printComments() {
+    System.out.println("Comments:");
+    List<Comment> comments = commentService.getComments("1024");
+    for (Comment comment : comments) {
+      System.out.println(comment.getComment());
+    }
+    System.out.println("------------------------------");
+  }
+
+  private void printRating() {
+    System.out.println("Rating: " + ratingService.getAverageRating("1024"));
   }
 
   private void processRatingAndComment() {

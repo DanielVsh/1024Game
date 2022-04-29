@@ -12,13 +12,10 @@ import org.springframework.web.client.RestTemplate;
 import sk.tuke.kpi.kp.game.UI.ConsoleUI;
 import sk.tuke.kpi.kp.game.core.Board;
 import sk.tuke.kpi.kp.game.service.comments.CommentService;
-import sk.tuke.kpi.kp.game.service.comments.CommentServiceJPA;
 import sk.tuke.kpi.kp.game.service.comments.CommentServiceRestClient;
 import sk.tuke.kpi.kp.game.service.rating.RatingService;
-import sk.tuke.kpi.kp.game.service.rating.RatingServiceJPA;
 import sk.tuke.kpi.kp.game.service.rating.RatingServiceRestClient;
 import sk.tuke.kpi.kp.game.service.score.ScoreService;
-import sk.tuke.kpi.kp.game.service.score.ScoreServiceJPA;
 import sk.tuke.kpi.kp.game.service.score.ScoreServiceRestClient;
 
 @SpringBootApplication

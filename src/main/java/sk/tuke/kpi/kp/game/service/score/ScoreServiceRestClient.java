@@ -2,12 +2,10 @@ package sk.tuke.kpi.kp.game.service.score;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import sk.tuke.kpi.kp.game.entity.score.Score;
 
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -29,7 +27,6 @@ public class ScoreServiceRestClient implements ScoreService{
         return Arrays.asList(
             Objects.requireNonNull(
                 restTemplate.getForObject(url + "/score/" + game +"/all", Score[].class)));
-//        return List.of(new Score("test", "test", 1234, new Date()));
     }
 
     @Override

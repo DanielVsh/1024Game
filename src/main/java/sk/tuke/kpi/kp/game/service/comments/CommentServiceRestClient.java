@@ -25,7 +25,7 @@ public class CommentServiceRestClient implements CommentService {
   @Override
   public List<Comment> getComments(String game) {
     return Arrays.asList(Objects.requireNonNull(restTemplate
-        .getForObject(url + "/comments" + game, Comment[].class)));
+        .getForObject(url + "/comment/" + game + "/all", Comment[].class)));
   }
 
   @Override
