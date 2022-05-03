@@ -7,25 +7,41 @@
     <title>Game</title>
 </head>
 <body>
-<h1>Game 1024</h1>
-<h2 th:text="${@gameController.printRating}"></h2>
+<h3> Game 1024 </h3>
+<h5> Rating: <b><span th:text="${@gameController.printRating}"> </b></span></h5>
+<div>
+    <span th:if="${@mainPageController.isLogged}">
+        Logged as: <span th:text="${@mainPageController.getPlayer().getName()}"></span>
+    </span>
+    <span th:if="not ${@mainPageController.isLogged}">
+        <a class="btn btn-primary" href="http://localhost:8080" role="button">Login please</a>
+    </span>
+</div>
 <h6>Top Score: </h6>
 <span th:utext="${@gameController.printScore}"></span>
 <a class="btn btn-primary" href="/game/new" role="button">New Game</a>
 <span th:utext="${@gameController.printGame}"></span>
-<a class="btn btn-primary" href="/game?direction=a" role="button">LEFT</a>
-<a class="btn btn-primary" href="/game?direction=w" role="button"> UP </a>
-<a class="btn btn-primary" href="/game?direction=s" role="button">DOWN</a>
-<a class="btn btn-primary" href="/game?direction=d" role="button">RIGHT</a>
+<span th:if="${@gameController.isGamePlaying}">
+    <a class="btn btn-primary" href="/game?direction=a" role="button">LEFT</a>
+    <a class="btn btn-primary" href="/game?direction=w" role="button"> UP </a>
+    <a class="btn btn-primary" href="/game?direction=s" role="button">DOWN</a>
+    <a class="btn btn-primary" href="/game?direction=d" role="button">RIGHT</a>
+</span>
 <span th:utext="${@gameController.gameProcessStatement}"></span>
-<div class="input-group mb-3">
-    <form action="/game/rating" method="post">
-        <input type="number" class="form-control" placeholder="Rate game" name="rating" min="0" max="5">
-    </form>
-    <form action="/game/comment" method="post">
-        <input type="text" class="form-control" placeholder="Your comment" name="comment">
-    </form>
-</div>
+<span th:if="${@mainPageController.isLogged}">
+    <div class="input-group mb-3">
+        <span th:if="not ${@mainPageController.getPlayer.isRated}">
+            <form action="/game/rating" method="post">
+                <input type="number" class="form-control" placeholder="Rate game" name="rating" min="0" max="5">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Submit</button>
+            </form>
+        </span>
+        <form action="/game/comment" method="post">
+            <input type="text" class="form-control" placeholder="Your comment" name="comment">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Submit</button>
+        </form>
+    </div>
+</span>
 <a class="btn btn-primary" href="/comment/1024/all" role="button">Show all comments</a>
 </body>
 </html>

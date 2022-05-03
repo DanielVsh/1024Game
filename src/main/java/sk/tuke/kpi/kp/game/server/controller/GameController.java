@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.WebApplicationContext;
 import sk.tuke.kpi.kp.game.core.Board;
 import sk.tuke.kpi.kp.game.core.Direction;
+import sk.tuke.kpi.kp.game.core.GameState;
 import sk.tuke.kpi.kp.game.entity.coments.Comment;
 import sk.tuke.kpi.kp.game.entity.rating.Rating;
 import sk.tuke.kpi.kp.game.entity.score.Score;
@@ -16,7 +17,6 @@ import sk.tuke.kpi.kp.game.service.rating.RatingService;
 import sk.tuke.kpi.kp.game.service.score.ScoreService;
 
 import java.util.Date;
-import java.util.Optional;
 
 import static sk.tuke.kpi.kp.game.core.GameState.*;
 
@@ -57,15 +57,7 @@ public class GameController {
   public String getGame(Model model,
                         @RequestParam(required = false) String direction) {
     if (direction != null && board.getGameState() == PLAYING) {
-      Direction.directionBoard(board);
-      switch (direction.toUpperCase()) {
-        case "W" -> dir.moveTo(Direction.UP);
-        case "A" -> dir.moveTo(Direction.LEFT);
-        case "S" -> dir.moveTo(Direction.DOWN);
-        case "D" -> dir.moveTo(Direction.RIGHT);
-        default -> dir.moveTo(Direction.NONE);
-      }
-      play();
+      move(direction);
     }
     model.addAttribute("comment", comment);
     model.addAttribute("rating", rating);
@@ -75,7 +67,6 @@ public class GameController {
   @PostMapping("/comment")
   public String addComment(@ModelAttribute("comment") String comment) {
     this.comment = comment;
-    System.out.println("comment: " + comment);
     addNewComment();
     return "redirect:/game";
   }
@@ -84,18 +75,29 @@ public class GameController {
   public String addRating(@ModelAttribute("rating") Integer rating) {
     this.rating = rating;
     addNewRating();
-    System.out.println("rating: " + rating);
+    mainPageController.getPlayer().setRated(true);
     return "redirect:/game";
   }
 
-  private void play() {
+  private void move(String direction) {
+    Direction.directionBoard(board);
+    switch (direction.toUpperCase()) {
+      case "W" -> dir.moveTo(Direction.UP);
+      case "A" -> dir.moveTo(Direction.LEFT);
+      case "S" -> dir.moveTo(Direction.DOWN);
+      case "D" -> dir.moveTo(Direction.RIGHT);
+      default -> dir.moveTo(Direction.NONE);
+    }
     if (board.getGameState() == PLAYING) {
       board.checkPossibleMoves();
       if (dir.isMoved()) {
         board.spawnRandomNumbers();
       }
     }
+    if (board.getGameState() != PLAYING)
+      addNewScore();
   }
+
 
   public String printGame() {
     StringBuilder sb = new StringBuilder();
@@ -119,19 +121,24 @@ public class GameController {
       case FAILED -> {
         sb.append("<h3>YOU LOSE, YOUR SCORE: ").append(Board.getScore())
           .append("</h3>").append("\n");
-        addNewScore();
-        Board.setGameState(NONE);
+        sb.append("<h3>GAME OVER</h3>").append("\n");
+        sb.append("<h4> \"New Game\" to start new game</h4>").append("\n");
+        if (mainPageController.isLogged()) {
+          sb.append("<h4>Leave a comment and rate the game</h4>").append("\n");
+        } else {
+          sb.append("<h4>Login to comment and rate the game</h4>").append("\n");
+        }
       }
       case SOLVED -> {
         sb.append("<h3>YOU WON, YOUR SCORE: ").append(Board.getScore())
           .append("</h3>").append("\n");
-        addNewScore();
-        Board.setGameState(NONE);
-      }
-      case NONE -> {
         sb.append("<h3>GAME OVER</h3>").append("\n");
         sb.append("<h4> \"New Game\" to start new game</h4>").append("\n");
-        sb.append("<h4>Leave a comment and rate the game</h4>").append("\n");
+        if (mainPageController.isLogged()) {
+          sb.append("<h4>Leave a comment and rate the game</h4>").append("\n");
+        } else {
+          sb.append("<h4>Login to comment and rate the game</h4>").append("\n");
+        }
       }
     }
     return sb.toString();
@@ -157,28 +164,26 @@ public class GameController {
   public String printRating() {
     if (ratingService.getAverageRating("1024") != null
       && ratingService.getAverageRating("1024") >= 0) {
-      return "Rating: " + ratingService.getAverageRating("1024").toString();
+      return ratingService.getAverageRating("1024").toString();
     } else {
       return "No ratings yet";
     }
   }
 
   private void addNewRating() {
-    if (mainPageController.getNickname() != null
-      && mainPageController.getNickname().length() > 0) {
+    if (mainPageController.isLogged()) {
       ratingService.setRating(new Rating(
         rating,
         "1024",
-        mainPageController.getNickname(),
+        mainPageController.getPlayer().getName(),
         new Date()));
     }
   }
 
   private void addNewComment() {
-    if (mainPageController.getNickname() != null
-      && mainPageController.getNickname().length() > 0) {
+    if (mainPageController.isLogged()) {
       commentService.addComment(new Comment(
-        mainPageController.getNickname(),
+        mainPageController.getPlayer().getName(),
         "1024",
         comment,
         new Date()));
@@ -186,11 +191,10 @@ public class GameController {
   }
 
   private void addNewScore() {
-    if (mainPageController.getNickname() != null
-      && mainPageController.getNickname().length() > 0) {
+    if (mainPageController.isLogged()) {
       scoreService.addScore(new Score(
         "1024",
-        mainPageController.getNickname(),
+        mainPageController.getPlayer().getName(),
         Board.getScore(),
         new Date()));
     }
@@ -235,5 +239,9 @@ public class GameController {
         return "0";
       }
     }
+  }
+
+  public boolean isGamePlaying() {
+    return board.getGameState() == PLAYING;
   }
 }
