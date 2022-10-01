@@ -9,54 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a652f5-adaa-4880-b7b5-643cf6982af5" name="Changes" comment="kp 3 odovzdavka">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/comments/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/comments/CommentServiceJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/comments/CommentServiceRestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/rating/RatingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/rating/RatingServiceJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/rating/RatingServiceRestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/score/ScoreRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/score/ScoreServiceJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/score/ScoreServiceRestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="52a652f5-adaa-4880-b7b5-643cf6982af5" name="Changes" comment="!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/SpringClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/ConsoleUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/entity/coments/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/entity/coments/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/entity/rating/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/entity/rating/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/entity/score/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/entity/score/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/GameServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/GameServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/comment/CommentServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/comment/CommentServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/rating/RatingServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/rating/RatingServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/score/ScoreServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/score/ScoreServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/player/IPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/player/IPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/player/PlayerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/player/PlayerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/player/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/player/PlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/comments/CommentException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/comments/CommentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/comments/CommentServiceJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/comments/CommentServiceRestClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/rating/RatingException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/rating/RatingService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/rating/RatingServiceJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/rating/RatingServiceRestClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/score/GameStudioException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/score/ScoreService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/score/ScoreServiceJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/service/score/ScoreServiceRestClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/BoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/DirectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/DirectionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/TileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/sk/tuke/kpi/kp/game/core/TileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/daniel/vishnievskyi/server/GameServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daniel/vishnievskyi/GameServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,13 +40,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/UI/ConsoleUI.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/core/Direction.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/entity/score/Score.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/controller/GameController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/controller/MainPageController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/rating/RatingServiceRest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/sk/tuke/kpi/kp/game/server/service/score/ScoreServiceJPA.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/daniel/vishnievskyi/core/Direction.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/daniel/vishnievskyi/entity/score/Score.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/daniel/vishnievskyi/server/controller/GameController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/daniel/vishnievskyi/server/controller/MainPageController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/daniel/vishnievskyi/server/rating/RatingServiceRest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/daniel/vishnievskyi/server/service/score/ScoreServiceJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/templates/game.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/templates/index.html" root0="FORCE_HIGHLIGHTING" />
@@ -184,7 +138,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in 1024Game">
+  <component name="RunManager" selected="Spring Boot.GameServer (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sk.tuke.kpi.kp.game.Main" />
       <module name="1024Game" />
@@ -197,9 +151,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
     </configuration>
     <configuration name="All in 1024Game" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="1024Game" />
@@ -222,6 +173,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="1024Game" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="daniel.vishnievskyi.GameServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="daniel.vishnievskyi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringClient" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="1024Game" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="sk.tuke.kpi.kp.game.SpringClient" />
@@ -237,18 +201,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="JUnit.All in 1024Game" />
+      <item itemvalue="Spring Boot.GameServer (1)" />
       <item itemvalue="Spring Boot.SpringClient" />
       <item itemvalue="Spring Boot.GameServer" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in 1024Game" />
+        <item itemvalue="Spring Boot.GameServer (1)" />
         <item itemvalue="Spring Boot.GameServer" />
+        <item itemvalue="JUnit.All in 1024Game" />
         <item itemvalue="Spring Boot.SpringClient" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="HTTP Request.generated-requests | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -322,7 +286,7 @@
       <workItem from="1656336710591" duration="96000" />
       <workItem from="1656337330870" duration="9000" />
       <workItem from="1664558820477" duration="7077000" />
-      <workItem from="1664615624705" duration="1445000" />
+      <workItem from="1664615624705" duration="2049000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring&#10;fixed class Direction">
       <created>1647374546492</created>
@@ -408,7 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651597645121</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="!">
+      <created>1664617200623</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664617200623</updated>
+    </task>
+    <task id="LOCAL-00014" summary="!">
+      <created>1664617391250</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664617391250</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +409,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="rating&#10;comment&#10;services" />
     <MESSAGE value="kp 3 odovzdavka" />
-    <option name="LAST_COMMIT_MESSAGE" value="kp 3 odovzdavka" />
+    <MESSAGE value="!" />
+    <option name="LAST_COMMIT_MESSAGE" value="!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
