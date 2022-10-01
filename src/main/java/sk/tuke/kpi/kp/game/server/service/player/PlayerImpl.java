@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 import sk.tuke.kpi.kp.game.entity.player.Player;
 
 @Component
-public class PlayerImpl implements IPlayer{
+public class PlayerImpl {
+
   private final PlayerRepository playerRepository;
 
   @Autowired
@@ -13,7 +14,6 @@ public class PlayerImpl implements IPlayer{
     this.playerRepository = playerRepository;
   }
 
-  @Override
   public void addPlayer(Player player) {
     playerRepository.save(player);
   }

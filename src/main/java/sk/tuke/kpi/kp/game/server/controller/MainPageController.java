@@ -3,7 +3,10 @@ package sk.tuke.kpi.kp.game.server.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import sk.tuke.kpi.kp.game.entity.player.Player;
 import sk.tuke.kpi.kp.game.server.service.player.PlayerService;
 
@@ -26,7 +29,7 @@ public class MainPageController {
   @PostMapping("/login")
   public String login(@ModelAttribute("player") Player player) {
     this.player = player;
-    if(isLogged()) {
+    if (isLogged()) {
       playerService.addPlayer(player);
     }
     return "redirect:/game";

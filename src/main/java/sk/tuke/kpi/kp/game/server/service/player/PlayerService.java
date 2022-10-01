@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import sk.tuke.kpi.kp.game.entity.player.Player;
 
 @Service
-public class PlayerService implements IPlayer {
+public class PlayerService {
 
   private final PlayerImpl playerImpl;
 
@@ -14,7 +14,6 @@ public class PlayerService implements IPlayer {
     this.playerImpl = playerImpl;
   }
 
-  @Override
   public void addPlayer(Player player) {
     playerImpl.addPlayer(player);
   }

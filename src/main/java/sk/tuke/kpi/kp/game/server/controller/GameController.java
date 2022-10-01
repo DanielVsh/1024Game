@@ -3,22 +3,20 @@ package sk.tuke.kpi.kp.game.server.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.WebApplicationContext;
 import sk.tuke.kpi.kp.game.core.Board;
 import sk.tuke.kpi.kp.game.core.Direction;
-import sk.tuke.kpi.kp.game.core.GameState;
 import sk.tuke.kpi.kp.game.entity.coments.Comment;
 import sk.tuke.kpi.kp.game.entity.rating.Rating;
 import sk.tuke.kpi.kp.game.entity.score.Score;
-import sk.tuke.kpi.kp.game.service.comments.CommentService;
-import sk.tuke.kpi.kp.game.service.rating.RatingService;
-import sk.tuke.kpi.kp.game.service.score.ScoreService;
+import sk.tuke.kpi.kp.game.server.service.comments.CommentServiceRestClient;
+import sk.tuke.kpi.kp.game.server.service.rating.RatingServiceRestClient;
+import sk.tuke.kpi.kp.game.server.service.score.ScoreServiceRestClient;
 
 import java.util.Date;
 
-import static sk.tuke.kpi.kp.game.core.GameState.*;
+import static sk.tuke.kpi.kp.game.core.GameState.PLAYING;
 
 
 @Controller
@@ -34,33 +32,32 @@ public class GameController {
 
   private final Direction dir = Direction.NONE;
 
-  @Autowired
-  private ScoreService scoreService;
-  @Autowired
-  private RatingService ratingService;
-  @Autowired
-  private CommentService commentService;
+  private final ScoreServiceRestClient scoreService;
+  private final RatingServiceRestClient ratingService;
+  private final CommentServiceRestClient commentService;
 
   @Autowired
-  public GameController(MainPageController mainPageController) {
+  public GameController(MainPageController mainPageController,
+                        ScoreServiceRestClient scoreService,
+                        RatingServiceRestClient ratingService,
+                        CommentServiceRestClient commentService) {
     this.mainPageController = mainPageController;
+    this.scoreService = scoreService;
+    this.ratingService = ratingService;
+    this.commentService = commentService;
   }
 
   @RequestMapping("/new")
   public String newGame() {
     board = new Board(4);
-    Board.setGameState(PLAYING);
     return "redirect:/game";
   }
 
   @GetMapping
-  public String getGame(Model model,
-                        @RequestParam(required = false) String direction) {
+  public String getGame(@RequestParam(required = false) String direction) {
     if (direction != null && board.getGameState() == PLAYING) {
       move(direction);
     }
-    model.addAttribute("comment", comment);
-    model.addAttribute("rating", rating);
     return "game";
   }
 

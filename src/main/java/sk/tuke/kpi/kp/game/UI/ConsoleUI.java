@@ -7,9 +7,9 @@ import sk.tuke.kpi.kp.game.core.GameState;
 import sk.tuke.kpi.kp.game.entity.coments.Comment;
 import sk.tuke.kpi.kp.game.entity.rating.Rating;
 import sk.tuke.kpi.kp.game.entity.score.Score;
-import sk.tuke.kpi.kp.game.service.comments.CommentService;
-import sk.tuke.kpi.kp.game.service.rating.RatingService;
-import sk.tuke.kpi.kp.game.service.score.ScoreService;
+import sk.tuke.kpi.kp.game.server.service.comments.CommentServiceRestClient;
+import sk.tuke.kpi.kp.game.server.service.rating.RatingServiceRestClient;
+import sk.tuke.kpi.kp.game.server.service.score.ScoreServiceRestClient;
 
 import java.util.Date;
 import java.util.List;
@@ -22,16 +22,20 @@ public class ConsoleUI {
 
   private final Scanner scanner = new Scanner(System.in);
 
-  @Autowired
-  private ScoreService scoreService;
-  @Autowired
-  private CommentService commentService;
-  @Autowired
-  private RatingService ratingService;
+  private final ScoreServiceRestClient scoreService;
+  private final CommentServiceRestClient commentService;
+  private final RatingServiceRestClient ratingService;
 
   private final Board board;
 
-  public ConsoleUI(Board board) {
+  @Autowired
+  public ConsoleUI(ScoreServiceRestClient scoreService,
+                   CommentServiceRestClient commentService,
+                   RatingServiceRestClient ratingService,
+                   Board board) {
+    this.scoreService = scoreService;
+    this.commentService = commentService;
+    this.ratingService = ratingService;
     this.board = board;
   }
 
@@ -152,7 +156,11 @@ public class ConsoleUI {
       System.out.println("Invalid rating");
       setRating(game);
     }
-    ratingService.setRating(new Rating(rating, game, System.getProperty("user.name"), new Date()));
+    ratingService.setRating(new Rating(
+      rating,
+      game,
+      System.getProperty("user.name"),
+      new Date()));
   }
 
   private void setComment(String game) {

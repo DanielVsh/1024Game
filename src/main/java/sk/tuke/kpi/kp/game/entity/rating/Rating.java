@@ -70,10 +70,10 @@ public class Rating {
   @Override
   public String toString() {
     return "Rating{" +
-        "rating=" + rating +
-        ", game='" + game + '\'' +
-        ", player='" + player + '\'' +
-        ", ratedOn=" + ratedOn +
-        '}';
+      "rating=" + rating +
+      ", game='" + game + '\'' +
+      ", player='" + player + '\'' +
+      ", ratedOn=" + ratedOn +
+      '}';
   }
 }

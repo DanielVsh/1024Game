@@ -68,10 +68,10 @@ public class Comment {
   @Override
   public String toString() {
     return "Comment{" +
-        "player='" + player + '\'' +
-        ", game='" + game + '\'' +
-        ", comment='" + comment + '\'' +
-        ", commentedOn=" + commentedOn +
-        '}';
+      "player='" + player + '\'' +
+      ", game='" + game + '\'' +
+      ", comment='" + comment + '\'' +
+      ", commentedOn=" + commentedOn +
+      '}';
   }
 }
